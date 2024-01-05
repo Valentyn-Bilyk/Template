@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- <script src="mraid.js"></script>
+    <script src="./js/dapi.js"></script> -->
+    <!-- <meta
+      name="viewport"
+      content="width=device-width,user-scalable=no,initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0"
+    /> -->
+    <meta name="ad.orientation" content="portrait,landscape" />
+    <title>Playable</title>
+    <link href="./css/font.css" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="screen_ui">
+      <div class="tutorial_block" id="tutorial_block_1">
+        <img src="./images/tap_icon.png" class="tutorial_hand" />
+        <div class="tutorial_text">
+          <img src="./images/tap_to_play.png" />
+        </div>
+      </div>
+
+      <div id="debug_label"></div>
+    </div>
+    <div id="win_ui" style="display: none">
+      <img
+        class="win_ui_bg"
+        id="win_ui_bg_portrait"
+        src="images/Endcard/bg_portrait.png"
+      />
+      <img
+        class="win_ui_bg"
+        id="win_ui_bg_landscape"
+        src="images/Endcard/bg_landscape.png"
+      />
+      <div class="win_screen">
+        <img class="win_ui_logo" src="./images/Endcard/game_logo.png" />
+        <img class="win_ui_rays" src="./images/Endcard/rays.png" />
+        <img id="win_ui_icon" src="./images/Endcard/game_icon.png" />
+        <img
+          id="win_ui_download_button"
+          src="./images/Endcard/play_now_button.png"
+        />
+      </div>
+    </div>
+
+    <script src="./js/libs/Three.js"></script>
+    <!-- <script src="./js/libs/SkeletonUtils.js"></script> -->
+    <!-- <script src="./js/libs/CannonES.js"></script> -->
+    <script src="./js/libs/GLTFLoader.js"></script>
+    <script src="./js/libs/Howler.js"></script>
+    <script src="./js/libs/Tween.js"></script>
+
+    <script src="js/controllers/NetworkAPIs.js"></script>
+    <script src="js/controllers/ThreeC.js"></script>
+    <script src="js/controllers/UIC.js"></script>
+    <!-- <script src="js/controllers/PhysicsC.js"></script> -->
+    <script src="js/controllers/ResoursesC.js"></script>
+    <script src="js/controllers/CameraC.js"></script>
+    <script src="js/controllers/GameC.js"></script>
+    <script src="js/controllers/InputC.js"></script>
+  </body>
+</html>

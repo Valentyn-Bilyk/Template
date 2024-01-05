@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- <meta name="viewport" content="user-scalable=0" /> -->
+    <title>Playable</title>
+  </head>
+  <body>
+    <iframe
+      width="980px"
+      height="1743px"
+      frameborder="0"
+      scrolling="no"
+      id="adunitFrame"
+      src="./index.html"
+      style="transform-origin: 0 0%"
+    ></iframe>
+  </body>
+
+  <script>
+    let _height = window.innerHeight;
+    let _k = _height / 1743;
+
+    document.getElementById("adunitFrame").style.transform =
+      "scale(" + _k + ")";
+  </script>
+</html>

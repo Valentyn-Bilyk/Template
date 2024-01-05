@@ -1,0 +1,184 @@
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  font-family: "lilita_oneregular";
+}
+body {
+  margin: 0;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f0f9ff+0,cbebff+47,a1dbff+100;Blue+3D+%2313 */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f0f9ff+0,cbebff+47,77cdff+100 */
+  background: #f0f9ff; /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    #004dff 0%,
+    #469dff 50%,
+    #79dcfe 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #004dff 0%,
+    #469dff 50%,
+    #79dcfe 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #004dff 0%,
+    #469dff 50%,
+    #79dcfe 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+
+#debug_label {
+  position: absolute;
+  top: 5%;
+  left: 30%;
+  width: 40%;
+  text-align: center;
+  font-size: 5vw;
+  color: black;
+}
+
+
+* {
+  /* touch-action: none; mintegral problem */
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+
+#screen_ui {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.win_screen {
+  position: absolute;
+  z-index: 7;
+  width: 100%;
+  height: 100%;
+}
+
+.tutorial_block {
+  position: absolute;
+  width: 60%;
+  height: 30%;
+  z-index: 5;
+  left: 20%;
+  top: 40%;
+}
+
+.tutorial_hand {
+  top: 0%;
+  margin-left: 40%;
+  width: 20%;
+  pointer-events: none;
+}
+
+.tutorial_text {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.tutorial_text img {
+  width: 80%;
+}
+
+@keyframes rays_anim {
+  0% {
+    transform-origin: 50% 50%;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform-origin: 50% 50%;
+    transform: rotate(360deg);
+  }
+}
+
+.win_ui_rays {
+  position: fixed;
+  width: 100%;
+  top: 20%;
+  z-index: 3;
+  opacity: 0.5;
+  animation-name: rays_anim;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.win_ui_bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+}
+
+.win_ui_logo {
+  position: absolute;
+  width: 90%;
+  top: 5%;
+  left: 5%;
+  z-index: 6;
+}
+
+#win_ui_icon {
+  position: absolute;
+  width: 50%;
+  top: 35%;
+  left: 25%;
+  z-index: 4;
+}
+
+#win_ui_download_button {
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  z-index: 5;
+  top: 76%;
+}
+
+#win_ui_download_button:active {
+  width: 45%;
+  left: 27.5%;
+}
+
+@media (orientation: landscape) {
+  #screen_ui {
+    width: 40%;
+    left: 30%;
+  }
+
+  .win_screen {
+    width: 50%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+
+  .win_ui_rays {
+    top: -20%;
+    width: 100%;
+  }
+
+  .win_ui_logo {
+    top: 10%;
+  }
+
+  #win_ui_icon {
+    display: none;
+  }
+
+  #win_ui_download_button {
+    top: 65%;
+  }
+}
